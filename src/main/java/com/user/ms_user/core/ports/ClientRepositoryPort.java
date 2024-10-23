@@ -6,6 +6,8 @@ import com.user.ms_user.core.domain.Client;
 
 public interface ClientRepositoryPort {
 
+    Client saveClient(Client client);
+
     List<Client> findAll();
 
 }

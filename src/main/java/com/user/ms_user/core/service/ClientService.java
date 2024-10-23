@@ -8,7 +8,7 @@ import com.user.ms_user.core.ports.ClientServicePort;
 
 public class ClientService implements ClientServicePort {
 
-    private ClientRepositoryPort repositoryPort;
+    private final ClientRepositoryPort repositoryPort;
 
     public ClientService(ClientRepositoryPort repositoryPort) {
 
@@ -18,6 +18,12 @@ public class ClientService implements ClientServicePort {
     @Override
     public List<Client> findAll() {
         return repositoryPort.findAll();
+    }
+
+    @Override
+    public Client saveClient(Client client) {
+
+        return repositoryPort.saveClient(client);
     }
 
 }
