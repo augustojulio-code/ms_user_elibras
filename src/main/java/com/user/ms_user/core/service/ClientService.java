@@ -1,6 +1,7 @@
 package com.user.ms_user.core.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import com.user.ms_user.core.domain.Client;
 import com.user.ms_user.core.ports.ClientRepositoryPort;
@@ -24,6 +25,18 @@ public class ClientService implements ClientServicePort {
     public Client saveClient(Client client) {
 
         return repositoryPort.saveClient(client);
+    }
+
+    @Override
+    public Client findByIdClient(UUID clientId) {
+
+        return repositoryPort.findByIdClient(clientId);
+    }
+
+    @Override
+    public void deleteById(UUID clientId) {
+
+        repositoryPort.deleteById(clientId);
     }
 
 }

@@ -1,6 +1,8 @@
 package com.user.ms_user.adapters.repositories;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -37,6 +39,21 @@ public class ClientRepositoryAdapter implements ClientRepositoryPort {
         ClientEntity savedClient = repository.save(entity);
 
         return modelmapper.map(savedClient, Client.class);
+    }
+
+    @Override
+    public Client findByIdClient(UUID clientId) {
+
+        Optional<ClientEntity> entity = repository.findById(clientId);
+
+        return modelmapper.map(entity, Client.class);
+
+    }
+
+    @Override
+    public void deleteById(UUID clientId) {
+
+        repository.deleteById(clientId);
     }
 
 }
