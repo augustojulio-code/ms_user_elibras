@@ -21,3 +21,4 @@ spring:
         coverage:
             jacoco:
                 xmlReportPaths: target/site/jacoco/jacoco.xml
+                reportPath: target/site/jacoco/index.html
