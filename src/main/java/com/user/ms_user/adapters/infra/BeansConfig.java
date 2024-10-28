@@ -8,8 +8,6 @@ import com.user.ms_user.core.ports.ClientRepositoryPort;
 import com.user.ms_user.core.ports.ClientServicePort;
 import com.user.ms_user.core.service.ClientService;
 
-import io.github.cdimascio.dotenv.Dotenv;
-
 @Configuration
 public class BeansConfig {
 

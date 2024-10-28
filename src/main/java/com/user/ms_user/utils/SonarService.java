@@ -41,4 +41,20 @@ public class SonarService {
 
     }
 
+    public void setSonarUrl(String sonarUrl) {
+        this.sonarUrl = sonarUrl;
+    }
+
+    public void setOrganization(String organization) {
+        this.organization = organization;
+    }
+
+    public void setProjectKey(String projectKey) {
+        this.projectKey = projectKey;
+    }
+
+    public void setSonarToken(String sonaToken) {
+        this.sonarToken = sonaToken;
+    }
+
 }
