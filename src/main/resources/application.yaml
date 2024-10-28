@@ -12,3 +12,9 @@ spring:
     h2:
         console:
             enable: true
+    
+    sonar:
+        url: ${SONAR_URL}
+        token: ${SONAR_TOKEN}
+        organization: ${SONAR_ORG}
+        projectkey: ${SONAR_PROJECTKEY}
