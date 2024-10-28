@@ -18,3 +18,7 @@ spring:
         token: ${SONAR_TOKEN}
         organization: ${SONAR_ORG}
         projectkey: ${SONAR_PROJECTKEY}
+        coverage:
+            jacoco:
+                xmlReportPaths: target/site/jacoco/jacoco.xml
+                reportPath: target/site/jacoco/index.html
