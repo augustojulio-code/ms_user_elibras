@@ -10,6 +10,10 @@ public class EnvLoader {
 
         System.setProperty("DB_USERNAME", dotenv.get("DB_USERNAME"));
         System.setProperty("DB_PASSWORD", dotenv.get("DB_PASSWORD"));
+        System.setProperty("SONAR_TOKEN", dotenv.get("SONAR_TOKEN"));
+        System.setProperty("SONAR_ORG", dotenv.get("SONAR_ORG"));
+        System.setProperty("SONAR_PROJECTKEY", dotenv.get("SONAR_PROJECTKEY"));
+
     }
 
 }
