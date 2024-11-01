@@ -2,7 +2,7 @@ name: Project CI Java
 
 on:
   push:
-    branches: ["feature/arch_structure"]
+    branches: ["master", "develop","feature/arch_structure"]
 
 env:
   SONAR_PROJECTKEY: ${{ secrets.SONAR_PROJECTKEY}}
