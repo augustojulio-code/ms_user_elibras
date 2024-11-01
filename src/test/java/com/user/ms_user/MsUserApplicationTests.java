@@ -6,13 +6,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.user.ms_user.utils.EnvLoader;
 
-@SpringBootTest
 class MsUserApplicationTests {
 
 	@BeforeAll
 	public static void setup() {
 
-		EnvLoader.loadEnv();
 	}
 
 	@Test
