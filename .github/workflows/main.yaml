@@ -5,6 +5,7 @@ on:
     branches: ["master", "develop","feature/arch_structure"]
 
 env:
+  SONAR_URL: ${{ secrets.SONAR_URL}}
   SONAR_PROJECTKEY: ${{ secrets.SONAR_PROJECTKEY}}
   SONAR_ORG: ${{secrets.SONAR_ORG}}
   SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
@@ -26,6 +27,10 @@ jobs:
         run: |
           echo "DB_USERNAME=${{ env.DB_USERNAME }}" > .env
           echo "DB_PASSWORD=${{ env.DB_PASSWORD }}" > .env
+          echo "SONAR_URL=${{ env.SONAR_URL }}" > .env
+          echo "SONAR_TOKEN=${{ env.SONAR_TOKEN }}" > .env
+          echo "SONAR_ORG=${{ env.SONAR_ORG }}" > .env
+          echo "SONAR_PROJECTKEY=${{ env.SONAR_PROJECTKEY }}" > .env
 
       - name: Run coverage scan
         run: mvn clean test jacoco:report sonar:sonar -Dsonar.projectKey=${{ env.SONAR_PROJECTKEY}} -Dsonar.organization=${{env.SONAR_ORG}} -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{env.SONAR_TOKEN}}
