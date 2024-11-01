@@ -11,7 +11,6 @@ class MsUserApplicationTests {
 	@BeforeAll
 	public static void setup() {
 
-		EnvLoader.loadEnv();
 	}
 
 	@Test
