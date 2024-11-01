@@ -22,7 +22,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.user.ms_user.adapters.controllers.ClientController;
 import com.user.ms_user.core.domain.Client;
 import com.user.ms_user.core.ports.ClientServicePort;
-import com.user.ms_user.utils.EnvLoader;
 
 public class ClientControllerTest {
 
@@ -37,7 +36,6 @@ public class ClientControllerTest {
 
     @BeforeEach
     void setUp() {
-        EnvLoader.loadEnv();
         MockitoAnnotations.openMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(clientController).build();
     }
