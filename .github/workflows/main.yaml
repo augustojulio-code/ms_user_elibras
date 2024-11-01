@@ -2,7 +2,7 @@ name: Project CI Java
 
 on:
   push:
-    branches: ["master","develop","feacture/arch_structure"]
+    branches: ["feacture/arch_structure"]
 
 env:
   SONAR_PROJECTKEY: ${{ secrets.SONAR_PROJECTKEY}}
@@ -10,7 +10,7 @@ env:
   SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
 jobs:
- test-report:
+  test-report:
     runs-on: ubuntu-latest
     steps:
         - name: Checkout code
